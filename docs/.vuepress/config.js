@@ -6,6 +6,7 @@
 
 module.exports = {
     base: '/github-nlp-progress/',
+    dest: 'build',
     themeConfig: {
         navbar: false,
         smoothScroll: true
