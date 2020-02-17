@@ -18,4 +18,4 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.deploy }}
         BRANCH: gh-pages
         FOLDER: docs/.vuepress/dist
-        BUILD_SCRIPT: npm install --registy=https://registy.npm.taobao.org && npm run docs:build
+        BUILD_SCRIPT: npm install && npm run docs:build
