@@ -15,4 +15,6 @@ jobs:
       with:
         node-version: 10.x
     - name: build
+      env:
+        ACCESS_TOKEN: ${{ secrets.deploy }}
       run: bash deploy.sh
