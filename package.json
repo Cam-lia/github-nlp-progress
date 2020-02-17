@@ -8,6 +8,7 @@
     "docs:build": "vuepress build docs"
   },
   "license": "UNLICENSED",
+  "homepage": "https://xumingzhi9.github.io/github-nlp-progress",
   "dependencies": {
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
