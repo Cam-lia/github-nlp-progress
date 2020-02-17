@@ -15,9 +15,9 @@ jobs:
       with:
         node-version: 10.x
     - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@master
-        env:
-            ACCESS_TOKEN: ${{ secrets.deploy }}
-            BRANCH: gh-pages
-            FOLDER: docs/.vuepress/dist
-            BUILD_SCRIPT: npm install && npm run docs:build
+      uses: JamesIves/github-pages-deploy-action@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.deploy }}
+        BRANCH: gh-pages
+        FOLDER: docs/.vuepress/dist
+        BUILD_SCRIPT: npm install && npm run docs:build
