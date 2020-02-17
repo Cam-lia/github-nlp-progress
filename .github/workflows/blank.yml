@@ -8,12 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
 
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@master
-      env:
+      env:s
         ACCESS_TOKEN: ${{ secrets.deploy }}
         BRANCH: gh-pages
         FOLDER: docs/.vuepress/dist
-        BUILD_SCRIPT: npm install && npm run docs:build
+        BUILD_SCRIPT: npm install --registy=https://registy.npm.taobao.org && npm run docs:build
