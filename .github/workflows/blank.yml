@@ -9,4 +9,4 @@ jobs:
 
     steps:
     - name: build
-      run: sh deploy.sh
+      run: bash deploy.sh
