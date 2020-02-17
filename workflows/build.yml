@@ -1,0 +1,10 @@
+name: build
+on: push
+jobs:
+    my_job:
+        name: Build Job
+        runs-on: ubuntu-latest
+        steps:
+            name: build
+            run:
+                sh deploy.sh
