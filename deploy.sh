@@ -16,6 +16,9 @@ cd docs/.vuepress/dist
 git init
 git add -A
 
+git config --global user.email "827668037@qq.com"
+git config --global user.name "xumingzhi9"
+
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io
