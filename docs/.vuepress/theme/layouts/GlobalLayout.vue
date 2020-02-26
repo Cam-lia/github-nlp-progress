@@ -26,11 +26,6 @@
 
 <script>
 export default {
-    beforeUpdate() {
-        if (this.$page.title) {
-            this.$page.title = '目录';
-        }
-    },
     computed: {
         layout() {
             if (this.$page.path) {
@@ -43,9 +38,6 @@ export default {
             }
             return 'NotFound';
         }
-    },
-    mounted() {
-        console.log(this.$el.getElementsByTagName('aside')[0]);
     }
 };
 </script>

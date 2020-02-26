@@ -1,6 +1,6 @@
 <template>
     <div class="sidebar-wrap" :class="sideAbs ? 'sidebar-wrap-absolute' : ''">
-        <sidebar :items="items"></sidebar>
+        <sidebar :items="items" v-if="items[0].children.length"></sidebar>
     </div>
 </template>
 <script>
@@ -10,6 +10,14 @@ export default {
         sidebar: SideBar
     },
     props: ['items'],
+    beforeUpdate() {
+        try {
+            this.items.forEach(element => {
+                element.title = '目录';
+            });
+        } catch (e) {
+        }
+    },
     data() {
         return {
             sideAbs: true
@@ -29,8 +37,8 @@ export default {
 </script>
 <style lang="stylus">
 .sidebar-wrap
-    right 0
-    left auto
+    left 50%
+    margin auto
     top 0
     width 200px
     padding-right 20px
@@ -38,6 +46,7 @@ export default {
     bottom 0
     z-index 1
     overflow auto
+    transform translateX(430px)
     &-absolute
         position absolute
         top 112px
@@ -78,7 +87,7 @@ export default {
         .sidebar-sub-header:last-of-type a
             margin-bottom 15px
 
-@media (max-width: 1300px)
+@media (max-width: 1320px)
     .sidebar-wrap
         display none
 
