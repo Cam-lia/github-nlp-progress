@@ -1,6 +1,6 @@
 <template>
     <div class="sidebar-wrap" :class="sideAbs ? 'sidebar-wrap-absolute' : ''">
-        <sidebar :items="items" v-if="items[0].children.length"></sidebar>
+        <sidebar :items="col" v-if="col[0] && col[0].children && col[0].children.length"></sidebar>
     </div>
 </template>
 <script>
@@ -10,12 +10,14 @@ export default {
         sidebar: SideBar
     },
     props: ['items'],
-    beforeUpdate() {
-        try {
-            this.items.forEach(element => {
-                element.title = '目录';
+    computed: {
+        col() {
+            const arr = this.items.map(item => {
+                item.title = '目录';
+                return item;
             });
-        } catch (e) {
+            console.log('arr', arr);
+            return arr;
         }
     },
     data() {
@@ -70,26 +72,56 @@ export default {
             border 0
         .sidebar-heading
             margin-bottom 15px
-        .sidebar-group.depth-0 > ul
-            border-left 1px solid #E6ECF0
-            & > li:first-of-type > a
-                margin-top 0
+
+        .sidebar-group.depth-0
+            &::before
+                position absolute
+                content ""
+                left -1px
+                bottom 25px
+                z-index 1
+                background #fff
+                width 2px
+                height 15px
+             > ul
+                border-left 1px solid #E6ECF0
+                position relative
+                & > li:first-of-type > a
+                    margin-top 0
         a.sidebar-link
             padding 0!important
             border-left-width 2px
             margin-bottom 15px
-        .sidebar-group a.sidebar-link,
+            padding-left 12px!important
+            // &:last-of-child
+            //     margin-bottom 0
+            + ul a.active::before
+                position absolute
+                content ""
+                height 16px
+                width 2px
+                background #fff
+                left 0
+                top 0
+                transform translateY(-31px)
         .sidebar-sub-headers
-            padding-left 12px!important;
+            padding-left 0!important
+            position relative
+            li
+                a.sidebar-link
+                    padding-left 24px!important
+                    border-left 2px solid transparent
+                a.active
+                    border-color $accentColor
         .sidebar-sub-header a
-            margin-bottom 10px;
-            margin-top 0;
+            margin-bottom 10px
+            margin-top 0
         .sidebar-sub-header:last-of-type a
             margin-bottom 15px
 
 @media (max-width: 1320px)
     .sidebar-wrap
-        display none
+        // display none
 
 
 </style>
