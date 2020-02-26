@@ -4,7 +4,7 @@
     </div>
 </template>
 <script>
-import SideBar from '@parent-theme/components/SideBar.vue';
+import SideBar from '@parent-theme/components/Sidebar.vue';
 export default {
     components: {
         sidebar: SideBar
