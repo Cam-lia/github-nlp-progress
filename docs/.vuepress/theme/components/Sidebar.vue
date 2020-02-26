@@ -41,46 +41,46 @@ export default {
     &-absolute
         position absolute
         top 112px
+    .sidebar
+        position relative
+        border-right 0
+        padding-right 0
+        background transparent
+        display block
+        width 100%
+        p, ul, ol
+            line-height 1.4
+        ul, li
+            margin 0
+        *
+            font-size 12px!important
+        .sidebar-heading,
+        .sidebar-heading *
+            padding 0
+            margin 0
+            border 0
+        .sidebar-heading
+            margin-bottom 15px
+        .sidebar-group.depth-0 > ul
+            border-left 1px solid #E6ECF0
+            & > li:first-of-type > a
+                margin-top 0
+        a.sidebar-link
+            padding 0!important
+            border-left-width 2px
+            margin-bottom 15px
+        .sidebar-group a.sidebar-link,
+        .sidebar-sub-headers
+            padding-left 12px!important;
+        .sidebar-sub-header a
+            margin-bottom 10px;
+            margin-top 0;
+        .sidebar-sub-header:last-of-type a
+            margin-bottom 15px
 
 @media (max-width: 1300px)
     .sidebar-wrap
         display none
 
-.sidebar
-    position relative
-    border-right 0
-    padding-right 0
-    background transparent
-    display block
-    width 100%
-    p, ul, ol
-        line-height 1.4
-    ul, li
-        margin 0
-    *
-        font-size 12px!important
-    .sidebar-heading,
-    .sidebar-heading *
-        padding 0
-        margin 0
-        border 0
-    .sidebar-heading
-        margin-bottom 15px
-    .sidebar-group.depth-0 > ul
-        border-left 1px solid #E6ECF0
-        & > li:first-of-type > a
-            margin-top 0
-    a.sidebar-link
-        padding 0!important
-        border-left-width 2px
-        margin-bottom 15px
-    .sidebar-group a.sidebar-link,
-    .sidebar-sub-headers
-        padding-left 12px!important;
-    .sidebar-sub-header a
-        margin-bottom 10px;
-        margin-top 0;
-    .sidebar-sub-header:last-of-type a
-        margin-bottom 15px
 
 </style>
