@@ -9,7 +9,9 @@ module.exports = {
     dest: 'build',
     themeConfig: {
         navbar: false,
-        smoothScroll: true
+        smoothScroll: true,
+        displayAllHeaders: true,
+        sidebar: 'auto'
     },
     module: {
         rules: [
@@ -20,6 +22,10 @@ module.exports = {
         ]
     },
     markdown: {
+        anchor: {
+            // permalink: false,
+            // permalinkBefore: false
+        },
         extendMarkdown: md => {
             // 如果覆盖，或者是对默认渲染器的代理，则记住老的渲染器。
             const defaultRender = md.renderer.rules.image || function (tokens, idx, options, env, self) {
