@@ -121,7 +121,7 @@ export default {
 
 @media (max-width: 1320px)
     .sidebar-wrap
-        // display none
+        display none
 
 
 </style>
