@@ -13,6 +13,9 @@ module.exports = {
         displayAllHeaders: true,
         sidebar: 'auto'
     },
+    alias: {
+        '@parent-theme': '@vuepress/theme-default'
+    },
     module: {
         rules: [
             {
