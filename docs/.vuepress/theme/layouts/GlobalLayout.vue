@@ -111,7 +111,7 @@ footer
             &:first-of-type
                 margin-right 20px
 .btn
-    height 40px
+    height 40pxs
     border 1px solid #fff
     color #fff
     line-height 38px
