@@ -93,17 +93,19 @@ export default {
             border-left-width 2px
             margin-bottom 15px
             padding-left 12px!important
-            // &:last-of-child
-            //     margin-bottom 0
-            + ul a.active::before
-                position absolute
-                content ""
-                height 16px
-                width 2px
-                background #fff
-                left 0
-                top 0
-                transform translateY(-31px)
+            &.active
+                font-weight 400
+            + ul a.active
+                position relative
+                &::before
+                    position absolute
+                    content ""
+                    height 1000px
+                    width 10px
+                    background #fff
+                    left -2px
+                    top  0
+                    transform translateY(-100%)
         .sidebar-sub-headers
             padding-left 0!important
             position relative

@@ -23,8 +23,8 @@ module.exports = {
     },
     markdown: {
         anchor: {
-            // permalink: false,
-            // permalinkBefore: false
+            permalink: false,
+            permalinkBefore: false
         },
         extendMarkdown: md => {
             // 如果覆盖，或者是对默认渲染器的代理，则记住老的渲染器。

@@ -53,7 +53,7 @@ export default {
         z-index 2
 
 .bk-dark
-    background #071B34
+    background #0a1d3a
     color #fff
 h1, h2
     background transparent
@@ -112,7 +112,7 @@ footer
     padding 0 20px
     display inline-block
     border-radius 20px
-    transition all .3s ease-in
+    // transition all .3s ease-in
     font-weight 400
     &:hover
         background #fff

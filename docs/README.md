@@ -4,6 +4,8 @@
 
 ### English
 
+打榜链接 [Automatic speech recognition <i class="iconfont icon-link"></i>](http://www.baidu.com)
+
 - [Automatic speech recognition](english/automatic_speech_recognition.md)
 - [CCG](english/ccg.md)
 - [Common sense](english/common_sense.md)
