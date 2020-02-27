@@ -13,6 +13,8 @@ body
 .theme-container
   position: relative;
   &.no-navbar
+    {$contentClass}:not(.custom) > *:first-child
+      margin-top: auto;
     {$contentClass}:not(.custom) > h1, h2, h3, h4, h5, h6
       margin-top: 1.875rem;
       font-weight: 500;
