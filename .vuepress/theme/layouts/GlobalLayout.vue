@@ -3,7 +3,7 @@
     <div id="global-layout">
         <header class="bk-dark">
             <video autoplay loop muted>
-                <source src="/github-nlp-progress/bk.mp4" type="video/mp4"></source>
+                <source src="./../../assets/bk.mp4" type="video/mp4"></source>
             </video>
             <div>
                 <div class="header-content">
@@ -44,6 +44,7 @@ export default {
 };
 </script>
 <style lang='stylus' scoped>
+@import url("./../../assets/icon/iconfont.css");
 #global-layout
     padding-bottom 80px
     min-height 100%

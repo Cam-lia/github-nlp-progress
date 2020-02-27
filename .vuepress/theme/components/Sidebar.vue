@@ -16,7 +16,6 @@ export default {
                 item.title = '目录';
                 return item;
             });
-            console.log('arr', arr);
             return arr;
         }
     },
